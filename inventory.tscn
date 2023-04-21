@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://0nqqxacxuayc"]
+
+[ext_resource type="Script" path="res://inventory.gd" id="1_jolrh"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jolrh")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 62.0
+offset_right = 549.0
+offset_bottom = 582.0
+color = Color(0.14902, 0.0823529, 0.0823529, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/MarginContainer"]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="Background/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Button" type="Button" parent="Background/MarginContainer/VBoxContainer/Header"]
+custom_minimum_size = Vector2(200, 70)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 20
+text = "Spawn Item"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Background/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 420)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="Background/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+columns = 8
