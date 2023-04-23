@@ -14,3 +14,24 @@ config/name="Grid Inventory Tutorial 1"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+DataHandler="*res://DataHandler.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
+
+[input]
+
+mouse_rightclick={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(284, 10),"global_position":Vector2(288, 53),"factor":1.0,"button_index":2,"pressed":true,"double_click":false,"script":null)
+]
+}
+mouse_leftclick={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(235, 27),"global_position":Vector2(239, 70),"factor":1.0,"button_index":1,"pressed":true,"double_click":false,"script":null)
+]
+}
