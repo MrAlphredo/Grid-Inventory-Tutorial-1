@@ -44,6 +44,13 @@ size_flags_vertical = 4
 theme_override_font_sizes/font_size = 20
 text = "Spawn Item"
 
+[node name="Add_slot" type="Button" parent="Background/MarginContainer/VBoxContainer/Header"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+text = "Add Slot"
+
 [node name="ScrollContainer" type="ScrollContainer" parent="Background/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 420)
 layout_mode = 2
@@ -101,4 +108,5 @@ theme_override_constants/v_separation = 1
 columns = 8
 
 [connection signal="pressed" from="Background/MarginContainer/VBoxContainer/Header/Button_Spawn" to="." method="_on_button_spawn_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/VBoxContainer/Header/Add_slot" to="." method="_on_add_slot_pressed"]
 [connection signal="pressed" from="Background2/MarginContainer/VBoxContainer/Header/Button_Spawn" to="." method="_on_button_spawn_pressed"]

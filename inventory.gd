@@ -14,7 +14,7 @@ var can_place := false
 var icon_anchor : Vector2
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for i in range(64):
+	for i in range(14):
 		create_slot()
 	
 	
@@ -153,3 +153,7 @@ func pick_item():
 	set_grids.call_deferred(current_slot)
 	
 	
+
+
+func _on_add_slot_pressed():
+	create_slot()
